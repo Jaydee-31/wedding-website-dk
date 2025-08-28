@@ -12,12 +12,8 @@ body {
 	/* font-family: "Open Sans", sans-serif; */
 }
 
-.btn-primary {
-	background-color: #000;
-}
-
 .bg-dark a {
-	color: #2998ff;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -27,10 +23,20 @@ body {
 }
 
 .bg-dark .btn {
-	background-color: #1d1d1d;
+	background-color: #ffffff;
+	color: #000;
+}
+.bg-dark .btn:hover {
+	background-color: #dd8c69;
+	color: #fff;
 }
 
 .bg-light .btn {
+	background-color: #000;
+	color: #fff;
+}
+.bg-light .btn:hover {
+	background-color: #dd8c69;
 	color: #fff;
 }
 
@@ -40,11 +46,11 @@ p {
 	line-height: 1.6;
 	opacity: 0.7;
 }
-
+/* 
 a:hover {
-	color: #067ded;
+	color: #dd8c69;
 	text-decoration: none;
-}
+} */
 
 h1,
 h2,
@@ -81,7 +87,7 @@ h6 {
 }
 
 .back-to-top:hover {
-	background: #0678e3;
+	background: #dd8c69;
 	color: #fff;
 }
 
@@ -1319,7 +1325,7 @@ h6 {
 	transition: ease-in-out 0.3s;
 }
 .bg-light .say-hi a {
-	color: #004a8f;
+	color: #000000;
 }
 .bg-light .say-hi::before,
 .bg-light .say-hi::after {
@@ -1363,7 +1369,7 @@ h6 {
 	height: 50px;
 	color: #ffffff;
 	background: #2a2a2a;
-	border: 2px solid #ffffff;
+	border: 2px solid #2a2a2a;
 	border-radius: 10px;
 	font-size: 16px;
 	font-weight: 500;
@@ -1403,8 +1409,8 @@ h6 {
 }
 .bg-dark .say-hi:hover {
 	background: #2a2a2a;
-	color: #0084ff;
-	border: 2px solid #0084ff;
+	color: #ffffff;
+	border: 2px solid #ffffff;
 	box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
 }
 

@@ -15,25 +15,26 @@
 	white-space: nowrap;
 	position: relative;
 }
+@media (min-width: 992px) {
+	.gallery:before,
+	.gallery:after {
+		position: absolute;
+		top: 0;
+		width: 250px;
+		height: 100%;
+		content: "";
+		z-index: 2;
+	}
 
-.gallery:before,
-.gallery:after {
-	position: absolute;
-	top: 0;
-	width: 250px;
-	height: 100%;
-	content: "";
-	z-index: 2;
-}
+	.gallery:before {
+		left: 0;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+	}
 
-.gallery:before {
-	left: 0;
-	background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.gallery:after {
-	right: 0;
-	background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+	.gallery:after {
+		right: 0;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+	}
 }
 
 .gallery:hover .gallery-slide {

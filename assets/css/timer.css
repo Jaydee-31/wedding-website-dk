@@ -1,4 +1,5 @@
 .timer-container {
+	padding: 2em;
 	display: grid;
 	gap: 10px;
 	text-align: center;
@@ -29,7 +30,7 @@
 	stroke: #eee;
 }
 .progress {
-	stroke: #ac5e3c;
+	stroke: #dd8c69;
 	stroke-linecap: round;
 	transform: rotate(-90deg);
 	transform-origin: 50% 50%;
