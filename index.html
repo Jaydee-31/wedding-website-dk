@@ -54,6 +54,7 @@
 		<link href="assets/css/toggle.css" rel="stylesheet" />
 		<link href="assets/css/details.css" rel="stylesheet" />
 		<link href="assets/css/gallery.css" rel="stylesheet" />
+		<link href="assets/css/timer.css" rel="stylesheet" />
 	</head>
 
 	<body class="bg-light text-dark">
@@ -110,42 +111,39 @@
 			</div>
 
 			<div class="d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
-				<div class="row timer">
-					<div class="timer-content">
-						<!-- Timer-->
-						<div class="row" id="grid">
-							<div class="col">
-								<div class="card card-square">
-									<div class="card-body">
-										<h5 class="value card-title" id="days">00</h5>
-										<div class="">Days</div>
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<div class="card card-square">
-									<div class="card-body">
-										<h5 class="value card-title" id="hours">00</h5>
-										<div class="">Hours</div>
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<div class="card card-square">
-									<div class="card-body">
-										<h5 class="value card-title" id="minutes">00</h5>
-										<div class="">Minutes</div>
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<div class="card card-square">
-									<div class="card-body">
-										<h5 class="value card-title" id="seconds">00</h5>
-										<div class="">Seconds</div>
-									</div>
-								</div>
-							</div>
+				<div class="timer-container">
+					<div class="countdown">
+						<div class="time-box">
+							<svg class="progress-ring" width="80" height="80">
+								<circle class="progress-bg" r="36" cx="40" cy="40" />
+								<circle class="progress" r="36" cx="40" cy="40" />
+							</svg>
+							<span id="days">0</span>
+							<div class="time-label">Days</div>
+						</div>
+						<div class="time-box">
+							<svg class="progress-ring" width="80" height="80">
+								<circle class="progress-bg" r="36" cx="40" cy="40" />
+								<circle class="progress" r="36" cx="40" cy="40" />
+							</svg>
+							<span id="hours">0</span>
+							<div class="time-label">Hours</div>
+						</div>
+						<div class="time-box">
+							<svg class="progress-ring" width="80" height="80">
+								<circle class="progress-bg" r="36" cx="40" cy="40" />
+								<circle class="progress" r="36" cx="40" cy="40" />
+							</svg>
+							<span id="minutes">0</span>
+							<div class="time-label">Minutes</div>
+						</div>
+						<div class="time-box">
+							<svg class="progress-ring" width="80" height="80">
+								<circle class="progress-bg" r="36" cx="40" cy="40" />
+								<circle class="progress" r="36" cx="40" cy="40" />
+							</svg>
+							<span id="seconds">0</span>
+							<div class="time-label">Seconds</div>
 						</div>
 					</div>
 				</div>

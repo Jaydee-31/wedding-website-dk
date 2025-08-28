@@ -1,57 +1,58 @@
-(function () {
-	const pad = (n) => String(n).padStart(2, "0");
-	const $ = (id) => document.getElementById(id);
-	const daysEl = $("days");
-	const hoursEl = $("hours");
-	const minutesEl = $("minutes");
-	const secondsEl = $("seconds");
-	const deadlineText = $("deadlineText");
-	const grid = $("grid");
-	const statusEl = document.createElement("h5");
+const targetDate = new Date("September 6, 2025 00:00:00").getTime();
 
-	let timerId = null;
-	let target = new Date("2025-09-06T13:00:00");
+const timeUnits = {
+	days: 86400000,
+	hours: 3600000,
+	minutes: 60000,
+	seconds: 1000,
+};
 
-	function updateDeadlineText() {
-		const day = String(target.getDate()).padStart(2, "0");
-		const month = String(target.getMonth() + 1).padStart(2, "0");
-		const year = target.getFullYear();
+const countdownElements = {
+	days: document.getElementById("days"),
+	hours: document.getElementById("hours"),
+	minutes: document.getElementById("minutes"),
+	seconds: document.getElementById("seconds"),
+};
 
-		deadlineText.textContent = `${day}.${month}.${year}`;
+const progressCircles = document.querySelectorAll(".progress");
+
+progressCircles.forEach((circle) => {
+	const radius = circle.r.baseVal.value;
+	const circumference = radius * 2 * Math.PI;
+	circle.style.strokeDasharray = `${circumference} ${circumference}`;
+	circle.style.strokeDashoffset = circumference;
+});
+
+function setProgress(circle, percent) {
+	const radius = circle.r.baseVal.value;
+	const circumference = radius * 2 * Math.PI;
+	circle.style.strokeDashoffset = circumference - percent * circumference;
+}
+
+function updateCountdown() {
+	const now = new Date().getTime();
+	const distance = targetDate - now;
+
+	if (distance < 0) {
+		Object.values(countdownElements).forEach((el) => (el.textContent = "0"));
+		return;
 	}
 
-	function render(ms) {
-		if (ms < 0) ms = 0;
-		const totalSeconds = Math.floor(ms / 1000);
-		const days = Math.floor(totalSeconds / 86400);
-		const hours = Math.floor((totalSeconds % 86400) / 3600);
-		const minutes = Math.floor((totalSeconds % 3600) / 60);
-		const seconds = totalSeconds % 60;
-		daysEl.textContent = pad(days);
-		hoursEl.textContent = pad(hours);
-		minutesEl.textContent = pad(minutes);
-		secondsEl.textContent = pad(seconds);
-	}
+	const days = Math.floor(distance / timeUnits.days);
+	const hours = Math.floor((distance % timeUnits.days) / timeUnits.hours);
+	const minutes = Math.floor((distance % timeUnits.hours) / timeUnits.minutes);
+	const seconds = Math.floor((distance % timeUnits.minutes) / timeUnits.seconds);
 
-	function tick() {
-		const now = Date.now();
-		const ms = target.getTime() - now;
-		render(ms);
-		if (ms <= 0) {
-			clearInterval(timerId);
-			timerId = null;
-			statusEl.textContent = "🎉";
-			grid.classList.add("done");
-		}
-	}
+	countdownElements.days.textContent = days;
+	countdownElements.hours.textContent = hours;
+	countdownElements.minutes.textContent = minutes;
+	countdownElements.seconds.textContent = seconds;
 
-	function startCountdown() {
-		clearInterval(timerId);
-		grid.classList.remove("done");
-		updateDeadlineText();
-		tick();
-		timerId = setInterval(tick, 1000);
-	}
+	setProgress(progressCircles[0], days / 365);
+	setProgress(progressCircles[1], hours / 24);
+	setProgress(progressCircles[2], minutes / 60);
+	setProgress(progressCircles[3], seconds / 60);
+}
 
-	startCountdown();
-})();
+setInterval(updateCountdown, 1000);
+updateCountdown();
