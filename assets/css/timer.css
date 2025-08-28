@@ -1,13 +1,19 @@
 .timer-container {
-	padding: 2em;
+	padding: 5px;
 	display: grid;
-	gap: 10px;
+	gap: 20px;
 	text-align: center;
 }
 .countdown {
 	display: flex;
-	gap: 10px;
+	gap: 20px;
 	justify-content: center;
+}
+@media (max-width: 992px) {
+	.countdown {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 .time-box {
 	display: flex;

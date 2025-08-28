@@ -8,10 +8,17 @@
 	}
 }
 
-.gallery {
+.bg-light .gallery {
 	overflow: hidden;
 	padding: 20px 0;
 	background: white;
+	white-space: nowrap;
+	position: relative;
+}
+.bg-dark .gallery {
+	overflow: hidden;
+	padding: 20px 0;
+	background: rgb(0, 0, 0);
 	white-space: nowrap;
 	position: relative;
 }
@@ -34,6 +41,16 @@
 	.gallery:after {
 		right: 0;
 		background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+	}
+
+	.bg-dark .gallery:before {
+		left: 0;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+	}
+
+	.bg-dark .gallery:after {
+		right: 0;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
 	}
 }
 
