@@ -361,7 +361,6 @@ h6 {
 --------------------------------------------------------------*/
 .bg-light #hero {
 	width: 100%;
-	height: 100vh;
 	background: url("../img/hero-bg.jpg") top right no-repeat;
 	background-size: cover;
 	position: relative;
@@ -411,8 +410,8 @@ h6 {
 	}
 
 	.bg-light #hero h1 {
-		font-size: 32px;
-		line-height: 36px;
+		font-size: 48px;
+		line-height: 72px;
 	}
 }
 
@@ -422,7 +421,6 @@ h6 {
 
 .bg-dark #hero {
 	width: 100%;
-	height: 100vh;
 	background: url("../img/dark-hero-bg.jpg") top right no-repeat;
 	background-size: cover;
 	position: relative;
