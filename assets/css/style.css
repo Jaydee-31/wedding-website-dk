@@ -234,7 +234,7 @@ h6 {
 }
 
 .bg-dark .nav-link {
-	background: #0f1721;
+	background: #1d1c1c;
 	color: #f0f0f0 !important;
 }
 
@@ -435,7 +435,7 @@ h6 {
 
 .bg-dark #hero:before {
 	content: "";
-	background: #040b14e6;
+	background: #101010db;
 	position: absolute;
 	bottom: 0;
 	top: 0;
@@ -460,8 +460,8 @@ h6 {
 	}
 
 	.bg-dark #hero h1 {
-		font-size: 32px;
-		line-height: 36px;
+		font-size: 48px;
+		line-height: 72px;
 	}
 
 	.bg-dark #hero p {
@@ -551,7 +551,7 @@ h6 {
 	box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.485);
 } */
 .bg-dark .about .count-box {
-	background-color: #0f1721;
+	background-color: #1d1c1c;
 }
 .bg-light .about .count-box {
 	background-color: #fff;
@@ -560,7 +560,7 @@ h6 {
 	background: #fff;
 }
 .dark-bg {
-	background: #0f1721;
+	background: #1d1c1c;
 }
 .light-txt {
 	color: #363636;
@@ -619,7 +619,7 @@ h6 {
 	background-color: #fff;
 }
 .bg-dark .timer .card {
-	background-color: #0f1721;
+	background-color: #1d1c1c;
 }
 .timer .card {
 	text-align: center;
@@ -1056,7 +1056,7 @@ h6 {
 	background-color: #fff;
 }
 .bg-dark .services .icon-box {
-	background-color: #0f1721;
+	background-color: #1d1c1c;
 }
 
 .services .icon-box .icon {

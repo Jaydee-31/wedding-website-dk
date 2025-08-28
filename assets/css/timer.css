@@ -33,10 +33,11 @@
 	stroke-width: 8;
 }
 .progress-bg {
-	stroke: #eee;
+	stroke: #b7410e;
+	opacity: 0.8;
 }
 .progress {
-	stroke: #dd8c69;
+	stroke: #f5d3a5;
 	stroke-linecap: round;
 	transform: rotate(-90deg);
 	transform-origin: 50% 50%;
