@@ -1,7 +1,6 @@
 .timer-container {
 	padding: 5px;
 	display: grid;
-	gap: 20px;
 	text-align: center;
 }
 .countdown {
@@ -12,6 +11,7 @@
 @media (max-width: 992px) {
 	.countdown {
 		display: flex;
+		gap: 10px;
 		flex-wrap: wrap;
 	}
 }
