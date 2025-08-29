@@ -1,4 +1,4 @@
-const targetDate = new Date("September 6, 2025 00:00:00").getTime();
+const targetDate = new Date("September 6, 2025 13:00:00").getTime();
 
 const timeUnits = {
 	days: 86400000,
