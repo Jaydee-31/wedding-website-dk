@@ -9,7 +9,7 @@ window.onload = function () {
 	const reservedSeats = params.get("num");
 
 	if (guestName && reservedSeats) {
-		text.innerHTML = `Hi <strong> ${guestName}</strong>, join us on our wedding day.<br>` + `<i class="fas fa-chair"></i> We’ve reserved <strong>${reservedSeats}</strong> seat(s) especially for you.`;
+		text.innerHTML = `Hi <strong> ${guestName}</strong>, join us on our wedding day.<br>` + `<i class="fas fa-chair"></i> We’ve reserved <strong>${reservedSeats}</strong> seat(s) for you.`;
 		modal.style.display = "block";
 	}
 
