@@ -35,6 +35,7 @@ function updateCountdown() {
 
 	if (distance < 0) {
 		Object.values(countdownElements).forEach((el) => (el.textContent = "0"));
+		document.getElementById("displayText").textContent = "forever has begun"; // Added this line
 		return;
 	}
 
