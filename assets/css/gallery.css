@@ -60,7 +60,7 @@
 
 .gallery-slide {
 	display: inline-block;
-	animation: 35s slide infinite linear;
+	animation: 100s slide infinite linear;
 }
 
 .gallery-slide img {
