@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: #fff;
+}
+
+#preloader:before {
+	content: none;
+}
+
+#preloader .ip {
+	width: 16em;
+	height: 8em;
+	max-width: 75vw;
+	height: auto;
+}
+
+#preloader .ip__track {
+	stroke: #ddd;
+}
+
+#preloader .ip__worm1,
+#preloader .ip__worm2 {
+	animation: preloader-worm1 2s linear infinite;
+}
+
+#preloader .ip__worm2 {
+	animation-name: preloader-worm2;
+}
+
+.bg-dark #preloader {
+	background: #0f0f10;
+}
+
+.bg-dark #preloader .ip__track {
+	stroke: #2a2a2a;
+}
+
+@keyframes preloader-worm1 {
+	from {
+		stroke-dashoffset: 0;
+	}
+	50% {
+		animation-timing-function: steps(1);
+		stroke-dashoffset: -358;
+	}
+	50.01% {
+		animation-timing-function: linear;
+		stroke-dashoffset: 358;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes preloader-worm2 {
+	from {
+		stroke-dashoffset: 358;
+	}
+	50% {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: -358;
+	}
+}
