@@ -30,84 +30,6 @@ body {
 	text-decoration: none;
 }
 
-.btn-primary-custom,
-.btn-secondary-custom {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.4rem;
-	min-height: 50px;
-	padding: 0.6rem 1.35rem;
-	border-radius: 999px;
-	font-weight: 600;
-	letter-spacing: 0.02em;
-	border: 2px solid transparent;
-	transition: all 0.28s ease;
-	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
-}
-
-.btn-primary-custom {
-	background: #111111;
-	border-color: #111111;
-	color: #ffffff !important;
-}
-
-.btn-primary-custom:hover {
-	background: var(--motif-accent);
-	border-color: var(--motif-accent);
-	color: #ffffff !important;
-	transform: translateY(-1px);
-}
-
-.btn-secondary-custom {
-	background: transparent;
-	border-color: #111111;
-	color: #111111 !important;
-}
-
-.btn-secondary-custom:hover {
-	background: #111111;
-	border-color: #111111;
-	color: #ffffff !important;
-	transform: translateY(-1px);
-}
-
-.bg-dark .btn-secondary-custom {
-	border-color: #f2f2f2;
-	color: #f2f2f2 !important;
-}
-
-.bg-dark .btn-primary-custom {
-	background: #f2f2f2;
-	border-color: #f2f2f2;
-	color: #111111 !important;
-}
-
-.bg-dark .btn-primary-custom:hover {
-	background: var(--motif-accent);
-	border-color: var(--motif-accent);
-	color: #ffffff !important;
-}
-
-.bg-dark .btn-secondary-custom:hover {
-	background: #f2f2f2;
-	border-color: #f2f2f2;
-	color: #111111 !important;
-}
-
-.btn-2:hover {
-	animation: glow 1s infinite alternate;
-}
-
-@keyframes glow {
-	from {
-		box-shadow: 0 0 5px var(--motif-glow);
-	}
-	to {
-		box-shadow: 0 0 20px var(--motif-glow);
-	}
-}
-
 p {
 	font-size: 16px;
 	font-weight: 500;
@@ -1308,8 +1230,6 @@ h6 {
 	}
 }
 
-/* Legacy .say-hi styles consolidated into btn-primary/btn-secondary variants */
-
 .contact .info {
 	width: 100%;
 
@@ -1320,77 +1240,6 @@ h6 {
 	text-align: center;
 	align-content: center;
 	justify-content: center;
-}
-
-.say-hi.btn-primary-custom,
-.say-hi.btn-secondary-custom {
-	width: 240px;
-	height: 50px;
-	padding: 0;
-	border-radius: 999px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.say-hi.btn-primary-custom a,
-.say-hi.btn-secondary-custom a {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	padding: 0 1.1rem;
-	font-weight: 600;
-	border-radius: 999px;
-	color: inherit !important;
-}
-
-.bg-light .say-hi.btn-primary-custom {
-	background: #111111;
-	border-color: #111111;
-	color: #ffffff;
-}
-
-.bg-light .say-hi.btn-primary-custom:hover {
-	background: var(--motif-accent);
-	border-color: var(--motif-accent);
-	color: #ffffff;
-}
-
-.bg-light .say-hi.btn-secondary-custom {
-	background: transparent;
-	border-color: #111111;
-	color: #111111;
-}
-
-.bg-light .say-hi.btn-secondary-custom:hover {
-	background: #111111;
-	border-color: #111111;
-	color: #ffffff;
-}
-
-.bg-dark .say-hi.btn-primary-custom {
-	background: #ffffff;
-	border-color: #ffffff;
-	color: #111111;
-}
-
-.bg-dark .say-hi.btn-primary-custom:hover {
-	background: var(--motif-accent);
-	border-color: var(--motif-accent);
-	color: #ffffff;
-}
-
-.bg-dark .say-hi.btn-secondary-custom {
-	background: transparent;
-	border-color: #f2f2f2;
-	color: #f2f2f2;
-}
-
-.bg-dark .say-hi.btn-secondary-custom:hover {
-	background: #f2f2f2;
-	border-color: #f2f2f2;
-	color: #111111;
 }
 
 .contact .info i {
