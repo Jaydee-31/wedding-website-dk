@@ -510,17 +510,23 @@ h6 {
 
 .section-title h2 {
 	font-size: 3rem;
-	line-height: 1;
+	line-height: 2;
 	font-family: "Amsterdam", Arial, serif;
 	font-weight: 400;
 	margin-bottom: 5px;
-	padding-bottom: 10px;
 	position: relative;
 }
 
 .section-title p {
-	font-size: 14px;
-	margin-bottom: 0;
+	font-size: 16px;
+	margin: 2em auto 0;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.section-title p {
+		width: 50%;
+	}
 }
 
 /*--------------------------------------------------------------
