@@ -3,7 +3,7 @@
 }
 
 .bg-light {
-	background: rgb(255 255 255);
+	background: rgb(240, 240, 240) !important;
 	/* background: radial-gradient(circle, rgba(232,232,232,1) 0%, rgba(253,244,255,1) 100%);
   border-radius: 3px; */
 	color: rgb(16, 16, 16) !important;
@@ -101,24 +101,14 @@
 
 .post-image-placeholder {
 	width: 100%;
-	height: 200px;
-	background: linear-gradient(135deg, rgba(221, 140, 105, 0.1) 0%, rgba(221, 140, 105, 0.05) 100%);
+	height: 300px;
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: rgba(0, 0, 0, 0.2);
 	font-size: 3rem;
-}
-
-.bg-dark .post-image-placeholder {
-	background: linear-gradient(135deg, rgba(221, 140, 105, 0.15) 0%, rgba(221, 140, 105, 0.08) 100%);
-	color: rgba(255, 255, 255, 0.15);
-}
-
-.post-image-placeholder::before {
-	content: "📷";
-	font-size: 2.5rem;
+	object-fit: cover;
 }
 
 .post-interactions {
